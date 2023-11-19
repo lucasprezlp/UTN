@@ -1,0 +1,3 @@
+public enum TipoProblema {
+    GENERAL, CONFIGURACION, CABLEADO, CENTRAL, DOMICILIO
+}
