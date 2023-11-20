@@ -5,7 +5,17 @@ public class Cliente {
 
     private String razonSocial;
     private int cuit;
-    private List<Servicios> serviciosContratados = new ArrayList<Servicios>();
+    private List<Servicio> serviciosContratados = new ArrayList<Servicio>();
+
+
+
+    public Cliente(String razonSocial, int cuit, List<Servicio> serviciosContratados) {
+        this.razonSocial = razonSocial;
+        this.cuit = cuit;
+        this.serviciosContratados = serviciosContratados;
+    }
+
+
 
     public String getRazonSocial() {
         return razonSocial;
@@ -15,15 +25,20 @@ public class Cliente {
         return cuit;
     }
 
-    public void agregarServicios(Servicios servicios) {
+
+
+
+    public void agregarServicios(Servicio servicios) {
+
         this.serviciosContratados.add(servicios);
     }
 
-    public List<Servicios> mostrarServiciosContratados() {
+    public List<Servicio> mostrarServiciosContratados() {
+
         return serviciosContratados;
     }
 
 
 
-    
+
 }

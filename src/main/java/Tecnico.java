@@ -4,9 +4,13 @@ import java.util.List;
 public class Tecnico {
 
     private String nombreDelTecnico;
-    private List<Especialidad> especialidades = new ArrayList<Especialidad>();
+    private List<Especialidad> especialidades; //Es clase Enum
 
-    private String comentariosResolucionIncidentes;
+
+    public Tecnico(String nombreDelTecnico, List<Especialidad> especialidades) {
+        this.nombreDelTecnico = nombreDelTecnico;
+        this.especialidades = especialidades; // cosultar
+    }
 
     public void setNombreDelTecnico(String nombreDelTecnico) {
         this.nombreDelTecnico = nombreDelTecnico;
@@ -16,7 +20,4 @@ public class Tecnico {
         this.especialidades.add(especialidades);
     }
 
-    public void setComentariosResolucionIncidentes(String comentariosResolucionIncidentes) {
-        this.comentariosResolucionIncidentes = comentariosResolucionIncidentes;
-    }
 }
